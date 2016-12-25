@@ -41,6 +41,10 @@ class ViewController: UIViewController {
         let increment = Double(valueLabel.text!)
         total = total / increment!
         dividerLabel.text = String(format: "$%.2f", total)
+        
+        if Double(valueLabel.text!) == 0 {
+            dividerLabel.text = "$0.00"
+        }
 
     }
 
@@ -82,7 +86,7 @@ class ViewController: UIViewController {
         
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
-        
     }
+    
 }
 
